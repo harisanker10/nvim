@@ -8,17 +8,26 @@ Fork and clone this repo to .config/nvim
 
 ## Plugins
 
-- autoclose_tags.lua
-- cmp.lua
-- colorizer.lua
-- indent-blank-line.lua
-- lsp_config.lua
-- lualine.lua
-- mini.lua
-- nvim-lint.lua
-- smoothscroll.lua
-- telescope.lua
-- todo.lua
-- tokyonight.lua
-- treesitter.lua
-- nvimtree.lua
+```plaintext
+NOTE: These are not actual plugin names.
+```
+
+- auto tabstop
+- autoclose tags
+- cmp
+- colorizer
+- comment
+- formatting
+- gitsigns
+- indent-blank-line
+- lsp
+- lualine
+- mini
+- nvim-lint
+- nvimtree
+- smoothscroll
+- telescope
+- todo
+- tokyonight
+- treesitter
+- which-key
