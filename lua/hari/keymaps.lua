@@ -1,10 +1,10 @@
-vim.g.mapleader = ' '
-vim.g.have_nerd_font = true
 local opts = { noremap = true, silent = true }
 
-vim.api.nvim_set_keymap('n', '<leader>ee', ':Ex<CR>', opts)
-vim.api.nvim_set_keymap('v', '<C-C>', '"+y', opts)
-vim.api.nvim_set_keymap('n', '<C-V>', '"+p', opts)
+vim.g.mapleader = ' '
+
+vim.keymap.set('v', '<C-C>', '"+y', opts)
+vim.keymap.set('n', '<C-V>', '"+p', opts)
+vim.keymap.set('n', '<leader>ee', ':Ex<CR>',opts)
 
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", opts)

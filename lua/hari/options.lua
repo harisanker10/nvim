@@ -1,5 +1,17 @@
+vim.g.mapleader = ' '
+
+vim.g.have_nerd_font = true
+
+vim.opt.number = true;
+vim.opt.relativenumber = true;
+
+vim.opt.tabstop = 2
+vim.opt.softtabstop = 2
+vim.opt.expandtab = true
+vim.opt.shiftwidth = 2
+
 vim.opt.showmode = false
-vim.opt.breakindent = true
+--vim.opt.breakindent = true
 vim.opt.undofile = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
@@ -11,7 +23,6 @@ vim.opt.signcolumn = 'yes'
 vim.opt.updatetime = 250
 
 -- Decrease mapped sequence wait time
--- Displays which-key popup sooner
 vim.opt.timeoutlen = 300
 
 -- Configure how new splits should be opened
@@ -21,8 +32,8 @@ vim.opt.splitbelow = true
 -- Sets how neovim will display certain whitespace characters in the editor.
 --  See `:help 'list'`
 --  and `:help 'listchars'`
-vim.opt.list = true
-vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+--vim.opt.list = true
+--vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 
 -- Preview substitutions live, as you type!
 vim.opt.inccommand = 'split'
