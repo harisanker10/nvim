@@ -15,9 +15,9 @@ return { -- You can easily change to a different colorscheme.
         sidebars = 'transparent',
         floats = 'transparent',
       },
+      on_colors = function(colors) end,
     }
-    vim.cmd.colorscheme 'tokyonight'
+    -- vim.cmd.colorscheme 'tokyonight'
     -- You can configure highlights by doing something like:
-    vim.cmd.hi 'Comment gui=none'
   end,
 }

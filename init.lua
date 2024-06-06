@@ -10,3 +10,5 @@ end ---@diagnostic disable-next-line: undefined-field
 vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup 'plugins'
+-- vim.cmd.colorscheme 'tokyonight'
+vim.cmd.colorscheme 'cyberdream'
