@@ -51,8 +51,8 @@ return {
   'nvim-lualine/lualine.nvim',
   event = 'VeryLazy',
   opts = function()
-    local colors = require('cyberdream.colors').default
-    local cyberdream = require 'lualine.themes.cyberdream'
+    local colors = require 'catppuccin.utils.colors'
+    local cyberdream = require 'lualine.themes.catppuccin'
     local copilot_colors = {
       [''] = { fg = colors.grey, bg = colors.none },
       ['Normal'] = { fg = colors.grey, bg = colors.none },
@@ -129,11 +129,6 @@ return {
             'location',
             color = { fg = colors.cyan, bg = colors.none },
           },
-        },
-        lualine_z = {
-          function()
-            return '  ' .. os.date '%X' .. ' 🚀 '
-          end,
         },
       },
 

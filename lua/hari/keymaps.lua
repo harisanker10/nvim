@@ -2,7 +2,7 @@ local opts = { noremap = true, silent = true }
 
 vim.g.mapleader = ' '
 
-vim.keymap.set('v', '<C-C>', '"+y', opts)
+vim.keymap.set('v', '<leader>cc', '"+y', opts)
 vim.keymap.set('n', '<C-V>', '"+p', opts)
 vim.keymap.set('n', '<leader>ee', ':Ex<CR>', opts)
 
@@ -15,7 +15,8 @@ vim.keymap.set('n', '<C-u>', '<C-u>zz', opts)
 
 vim.keymap.set('n', '<C-p>', ':bprevious<CR>', opts)
 vim.keymap.set('n', '<C-n>', ':bnext<CR>', opts)
-vim.keymap.set('n', '<leader>bd', ':bdelete<CR>', opts)
+vim.keymap.set('n', '<leader>dd', ':bdelete<CR>', opts)
+vim.keymap.set('n', '<leader>bd', ':bufdo bdelete<CR>', opts)
 -- Diagnostic keymaps
 vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = 'Go to previous [D]iagnostic message' })
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = 'Go to next [D]iagnostic message' })
@@ -26,6 +27,8 @@ vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to the left wind
 vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right window' })
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
+
+-- Map a keybinding to delete all buffers
 
 --nvim tree mapping
 vim.keymap.set('n', '<leader>tt', ':Neotree<CR>', opts)

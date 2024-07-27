@@ -1,5 +1,5 @@
 return {
-  'scottmckendry/cyberdream.nvim',
+  'harisanker10/cyberdream.nvim',
   lazy = false,
   priority = 1000,
   config = function()
@@ -7,9 +7,7 @@ return {
       transparent = true,
       borderless_telescope = false,
       theme = {
-        colors = {
-          pink = '#ff5c72',
-        },
+        colors = {},
       },
     }
   end,

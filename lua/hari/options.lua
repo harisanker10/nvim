@@ -13,6 +13,8 @@ vim.opt.shiftwidth = 2
 
 vim.opt.showmode = false
 vim.opt.breakindent = true
+vim.opt.swapfile = false
+vim.opt.backup = false
 vim.opt.undofile = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
@@ -43,7 +45,9 @@ vim.opt.inccommand = 'split'
 vim.opt.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
-vim.opt.scrolloff = 8
+vim.opt.scrolloff = 20
+
+vim.opt.updatetime = 50
 
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`

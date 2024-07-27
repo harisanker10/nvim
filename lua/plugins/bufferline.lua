@@ -6,6 +6,9 @@ return {
     require('bufferline').setup {
       options = {
         themable = true,
+        indicator = {
+          style = 'underline',
+        },
       },
     }
   end,
