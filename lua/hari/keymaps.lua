@@ -1,4 +1,4 @@
-local opts = { noremap = true, silent = true }
+local opts = { noremap = true }
 
 vim.g.mapleader = ' '
 
@@ -12,6 +12,8 @@ vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", opts)
 
 vim.keymap.set('n', '<C-d>', '<C-d>zz', opts)
 vim.keymap.set('n', '<C-u>', '<C-u>zz', opts)
+-- vim.keymap.set('n', 'j', 'jzz', opts)
+-- vim.keymap.set('n', 'k', 'kzz', opts)
 
 vim.keymap.set('n', '<C-p>', ':bprevious<CR>', opts)
 vim.keymap.set('n', '<C-n>', ':bnext<CR>', opts)
@@ -28,6 +30,7 @@ vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to the right win
 vim.keymap.set('n', '<C-j>', '<C-w><C-j>', { desc = 'Move focus to the lower window' })
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper window' })
 
+vim.keymap.set('n', '<leader>u', ':UndotreeToggle<CR>', { desc = 'Toggle Undotree' })
 -- Map a keybinding to delete all buffers
 
 --nvim tree mapping

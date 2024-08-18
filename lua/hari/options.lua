@@ -11,6 +11,9 @@ vim.opt.softtabstop = 2
 vim.opt.expandtab = true
 vim.opt.shiftwidth = 2
 
+vim.opt.foldmethod = 'syntax'
+vim.opt.foldlevel = 99
+
 vim.opt.showmode = false
 vim.opt.breakindent = true
 vim.opt.swapfile = false
