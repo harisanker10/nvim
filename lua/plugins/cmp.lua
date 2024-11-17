@@ -37,6 +37,9 @@ return { -- Autocompletion
     local luasnip = require 'luasnip'
     luasnip.config.setup {}
 
+    local capabilities = require('cmp_nvim_lsp').default_capabilities()
+    capabilities.textDocument.completion.completionItem.snippetSupport = false -- Disable snippet support if not needed
+
     cmp.setup {
       snippet = {
         expand = function(args)

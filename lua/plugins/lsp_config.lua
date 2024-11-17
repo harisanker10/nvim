@@ -43,7 +43,13 @@ return {
 
     vim.lsp.handlers['textDocument/hover'] = vim.lsp.with(vim.lsp.handlers.hover, {
       border = 'rounded',
+      debounce = 150, -- Add debounce for hover
     })
+
+    -- local client = vim.lsp.get_client_by_id(event.data.client_id)
+    -- if client then
+    --   client.server_capabilities.documentHighlightProvider = false -- Disable if not used
+    -- end
 
     local capabilities = vim.lsp.protocol.make_client_capabilities()
     capabilities = vim.tbl_deep_extend('force', capabilities, require('cmp_nvim_lsp').default_capabilities())
@@ -80,9 +86,9 @@ return {
     require('mason').setup()
 
     local ensure_installed = vim.tbl_keys(servers or {})
-    vim.list_extend(ensure_installed, {
-      'stylua',
-    })
+    -- vim.list_extend(ensure_installed, {
+    --   'stylua',
+    -- })
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
     require('mason-lspconfig').setup {
@@ -93,6 +99,13 @@ return {
           require('lspconfig')[server_name].setup(server)
         end,
       },
+    }
+
+    vim.diagnostic.config {
+      virtual_text = true, -- Turn off inline diagnostics
+      signs = true, -- Show signs in the gutter
+      update_in_insert = false, -- Do not update diagnostics in insert mode
+      severity_sort = true, -- Sort diagnostics by severity
     }
   end,
 }
